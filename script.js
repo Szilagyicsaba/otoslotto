@@ -1,8 +1,10 @@
 function ellenorzes() {
     var nyeroszamokSzoveg = document.getElementById("nyeroszamok").value;
     var sajatszamokSzoveg = document.getElementById("sajatszamok").value;
-    const nyeroszamok = nyeroszamokSzoveg.split(", ")
-    const sajatszamok = sajatszamokSzoveg.split(", ")
+    nyeroszamokSzoveg = nyeroszamokSzoveg.replace(/\s+/g, "")
+    sajatszamokSzoveg = sajatszamokSzoveg.replace(/\s+/g, "")
+    const nyeroszamok = nyeroszamokSzoveg.split(",")
+    const sajatszamok = sajatszamokSzoveg.split(",")
     var szamlalo = 0
 
     if (nyeroszamokSzoveg == "" || sajatszamokSzoveg == "") {
