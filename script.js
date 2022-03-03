@@ -6,14 +6,22 @@ function ellenorzes() {
     const nyeroszamok = nyeroszamokSzoveg.split(",")
     const sajatszamok = sajatszamokSzoveg.split(",")
     var szamlalo = 0
+    var talalt = [];
 
     if (nyeroszamokSzoveg == "" || sajatszamokSzoveg == "") {
         alert("Töltsd ki a mezőket")
         return;
     }
+
     sajatszamok.forEach(element => {
+
+        if (talalt.includes(element)) {
+            return;
+        }
+
         if (nyeroszamok.includes(element)) {
             szamlalo = szamlalo + 1
+            talalt.push(element)
         }
     });
 
